@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  next:
+    build: ./.docker/frontend
+    working_dir: /usr/src/app
+    tty: true
+    volumes:
+      - ./frontend/:/usr/src/app
+    ports:
+      - "127.8.8.8:3030:3000"
+  echo:
+    build: ./.docker/backend
+    working_dir: /go/src
+    tty: true
+    volumes:
+      - ./backend/:/go/src
+    ports:
+      - "127.8.8.8:8888:8888"
