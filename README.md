@@ -1,7 +1,11 @@
 仮想インターフェイスへのエイリアス追加
-
 ```
 sudo ifconfig lo0 alias 127.8.8.8 netmask 0xff000000
+```
+
+DockerCompose
+```
+docker-compose up -d
 ```
 
 バックエンドコンテナへのexec bash と バックエンドサーバー起動
